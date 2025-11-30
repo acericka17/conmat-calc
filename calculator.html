@@ -1,0 +1,752 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ConMat Calc </title>
+    <script src="https://cdn.tailwindcss.com/3.4.16"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: { primary: "#2563eb", secondary: "#3b82f6" },
+            borderRadius: {
+              none: "0px",
+              sm: "4px",
+              DEFAULT: "8px",
+              md: "12px",
+              lg: "16px",
+              xl: "20px",
+              "2xl": "24px",
+              "3xl": "32px",
+              full: "9999px",
+              button: "8px",
+            },
+          },
+        },
+      };
+    </script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.min.css"
+    />
+  <link rel="stylesheet" href="styles.css">
+  </head>
+  <body class="bg-gray-50 min-h-screen">
+    <header class="bg-white shadow-sm border-b border-gray-200">
+      <div class="px-6 py-4">
+        <div class="flex items-center justify-between">
+          <div class="flex items-center space-x-8">
+            <h1 class="text-2xl font-['Pacifico'] text-primary">
+              ConMat Calc
+            </h1>
+            <nav class="hidden md:flex space-x-6">
+              <a
+                href="index.html"
+                class="text-gray-700 hover:text-primary transition-colors" 
+                >Home</a
+              >
+              <a
+                href="calculator.html"
+                class="text-gray-700 hover:text-primary transition-colors" 
+                >Calculator</a
+              >
+              <a
+                href="introduction.html.html"
+                class="text-gray-700 hover:text-primary transition-colors"
+                >Instructions</a
+              >
+              <a
+                href="materialguides.html"
+                class="text-gray-700 hover:text-primary transition-colors"
+                >Materials Guide</a
+              >
+              <a
+                href="savedcalculation.html"
+                class="text-gray-700 hover:text-primary transition-colors"
+                >Saved Calculations</a
+              >
+            </nav>
+          </div>
+          <button></button>
+
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <main class="25">
+      <div class="max-w-7xl mx-auto px-6 py-10">
+        <div class="mt-25 grid grid-cols-4 md:grid-cols-3 gap-8">
+          <div class="lg:col-span-2">
+            <div
+              class="bg-white rounded-lg shadow-sm border border-gray-200 p-6"
+            >
+              <h2 class="text-xl font-semibold text-gray-900 mb-6">
+                ConMat Calc Calculator
+              </h2>
+              
+
+              <div class="mb-6">
+                <div class="flex space-x-1 bg-gray-100 p-1 rounded-lg">
+                  <button
+                    class="tab-button px-4 py-2 rounded-md text-sm font-medium transition-colors !rounded-button whitespace-nowrap active"
+                    data-tab="slab"
+                  >
+                    Slab
+                  </button>
+                  <button
+                    class="tab-button px-4 py-2 rounded-md text-sm font-medium transition-colors !rounded-button whitespace-nowrap"
+                    data-tab="beam"
+                  >
+                    Beam
+                  </button>
+                  <button
+                    class="tab-button px-4 py-2 rounded-md text-sm font-medium transition-colors !rounded-button whitespace-nowrap"
+                    data-tab="column"
+                  >
+                    Column
+                  </button>
+                  <button
+                    class="tab-button px-4 py-2 rounded-md text-sm font-medium transition-colors !rounded-button whitespace-nowrap"
+                    data-tab="footing"
+                  >
+                    Footing
+                  </button>
+                </div>
+              </div>
+
+              <div id="slab" class="tab-content active">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-6">
+                  <div>
+                    <label class="block text-sm font-medium text-gray-700 mb-2"
+                      >Length</label
+                    >
+                    <div class="flex">
+                      <input
+                        type="number"
+                        id="slab-length"
+                        class="flex-1 px-3 py-2 border border-gray-300 rounded-l-md text-sm"
+                        placeholder="Enter length"
+                      />
+                      <select
+                        id="slab-length-unit"
+                        class="border-l-0 border border-gray-300 rounded-r-md px-3 py-2 text-sm bg-white"
+                      >
+                        <option value="ft">ft</option>
+                        <option value="in">in</option>
+                        <option value="m" selected>m</option>
+                        <option value="cm">cm</option>
+                      </select>
+                    </div>
+                  </div>
+                  <div>
+                    <label class="block text-sm font-medium text-gray-700 mb-2"
+                      >Width</label
+                    >
+                    <div class="flex">
+                      <input
+                        type="number"
+                        id="slab-width"
+                        class="flex-1 px-3 py-2 border border-gray-300 rounded-l-md text-sm"
+                        placeholder="Enter width"
+                      />
+                      <select
+                        id="slab-width-unit"
+                        class="border-l-0 border border-gray-300 rounded-r-md px-3 py-2 text-sm bg-white"
+                      >
+                        <option value="ft">ft</option>
+                        <option value="in">in</option>
+                        <option value="m" selected>m</option>
+                        <option value="cm">cm</option>
+                      </select>
+                    </div>
+                  </div>
+                  <div>
+                    <label class="block text-sm font-medium text-gray-700 mb-2"
+                      >Thickness</label
+                    >
+                    <div class="flex">
+                      <input
+                        type="number"
+                        id="slab-thickness"
+                        class="flex-1 px-3 py-2 border border-gray-300 rounded-l-md text-sm"
+                        placeholder="Enter thickness"
+                      />
+                      <select
+                        id="slab-thickness-unit"
+                        class="border-l-0 border border-gray-300 rounded-r-md px-3 py-2 text-sm bg-white"
+                      >
+                        <option value="in">in</option>
+                        <option value="ft">ft</option>
+                        <option value="cm">cm</option>
+                        <option value="m" selected>m</option>
+                      </select>
+                    </div>
+                  </div>
+                  <div>
+                    <label class="block text-sm font-medium text-gray-700 mb-2"
+                      >Durability (PSI)</label
+                    >
+                    <select
+                      id="slab-psi"
+                      class="w-full px-3 py-2 border border-gray-300 rounded-md text-sm bg-white"
+                    >
+                      <option value="2500">2500 PSI</option>
+                      <option value="3000">3000 PSI</option>
+                      <option value="3500" selected>3500 PSI</option>
+                      <option value="4000">4000 PSI</option>
+                      <option value="5000">5000 PSI</option>
+                    </select>
+                  </div>
+                </div>
+              </div>
+
+              <div id="beam" class="tab-content">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-6">
+                  <div>
+                    <label class="block text-sm font-medium text-gray-700 mb-2"
+                      >Length</label
+                    >
+                    <div class="flex">
+                      <input
+                        type="number"
+                        id="beam-length"
+                        class="flex-1 px-3 py-2 border border-gray-300 rounded-l-md text-sm"
+                        placeholder="Enter length"
+                      />
+                      <select
+                        id="beam-length-unit"
+                        class="border-l-0 border border-gray-300 rounded-r-md px-3 py-2 text-sm bg-white"
+                      >
+                        <option value="ft">ft</option>
+                        <option value="in">in</option>
+                        <option value="m" selected>m</option>
+                        <option value="cm">cm</option>
+                      </select>
+                    </div>
+                  </div>
+                  <div>
+                    <label class="block text-sm font-medium text-gray-700 mb-2"
+                      >Width</label
+                    >
+                    <div class="flex">
+                      <input
+                        type="number"
+                        id="beam-width"
+                        class="flex-1 px-3 py-2 border border-gray-300 rounded-l-md text-sm"
+                        placeholder="Enter width"
+                      />
+                      <select
+                        id="beam-width-unit"
+                        class="border-l-0 border border-gray-300 rounded-r-md px-3 py-2 text-sm bg-white"
+                      >
+                        <option value="in">in</option>
+                        <option value="ft">ft</option>
+                        <option value="cm">cm</option>
+                        <option value="m" selected>m</option>
+                      </select>
+                    </div>
+                  </div>
+                  <div>
+                    <label class="block text-sm font-medium text-gray-700 mb-2"
+                      >Height</label
+                    >
+                    <div class="flex">
+                      <input
+                        type="number"
+                        id="beam-height"
+                        class="flex-1 px-3 py-2 border border-gray-300 rounded-l-md text-sm"
+                        placeholder="Enter height"
+                      />
+                      <select
+                        id="beam-height-unit"
+                        class="border-l-0 border border-gray-300 rounded-r-md px-3 py-2 text-sm bg-white"
+                      >
+                        <option value="in">in</option>
+                        <option value="ft">ft</option>
+                        <option value="cm">cm</option>
+                        <option value="m" selected>m</option>
+                      </select>
+                    </div>
+                  </div>
+                  <div>
+                    <label class="block text-sm font-medium text-gray-700 mb-2"
+                      >Durability (PSI)</label
+                    >
+                    <select
+                      id="beam-psi"
+                      class="w-full px-3 py-2 border border-gray-300 rounded-md text-sm bg-white"
+                    >
+                      <option value="2500">2500 PSI</option>
+                      <option value="3000">3000 PSI</option>
+                      <option value="3500" selected>3500 PSI</option>
+                      <option value="4000">4000 PSI</option>
+                      <option value="5000">5000 PSI</option>
+                    </select>
+                  </div>
+                </div>
+              </div>
+
+              <div id="column" class="tab-content">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-6">
+                  <div>
+                    <label class="block text-sm font-medium text-gray-700 mb-2"
+                      >Height</label
+                    >
+                    <div class="flex">
+                      <input
+                        type="number"
+                        id="column-height"
+                        class="flex-1 px-3 py-2 border border-gray-300 rounded-l-md text-sm"
+                        placeholder="Enter height"
+                      />
+                      <select
+                        id="column-height-unit"
+                        class="border-l-0 border border-gray-300 rounded-r-md px-3 py-2 text-sm bg-white"
+                      >
+                        <option value="ft">ft</option>
+                        <option value="in">in</option>
+                        <option value="m" selected>m</option>
+                        <option value="cm">cm</option>
+                      </select>
+                    </div>
+                  </div>
+                  <div>
+                    <label class="block text-sm font-medium text-gray-700 mb-2"
+                      >Width</label
+                    >
+                    <div class="flex">
+                      <input
+                        type="number"
+                        id="column-width"
+                        class="flex-1 px-3 py-2 border border-gray-300 rounded-l-md text-sm"
+                        placeholder="Enter width"
+                      />
+                      <select
+                        id="column-width-unit"
+                        class="border-l-0 border border-gray-300 rounded-r-md px-3 py-2 text-sm bg-white"
+                      >
+                        <option value="in">in</option>
+                        <option value="ft">ft</option>
+                        <option value="cm">cm</option>
+                        <option value="m" selected>m</option>
+                      </select>
+                    </div>
+                  </div>
+                  <div>
+                    <label class="block text-sm font-medium text-gray-700 mb-2"
+                      >Depth</label
+                    >
+                    <div class="flex">
+                      <input
+                        type="number"
+                        id="column-depth"
+                        class="flex-1 px-3 py-2 border border-gray-300 rounded-l-md text-sm"
+                        placeholder="Enter depth"
+                      />
+                      <select
+                        id="column-depth-unit"
+                        class="border-l-0 border border-gray-300 rounded-r-md px-3 py-2 text-sm bg-white"
+                      >
+                        <option value="in">in</option>
+                        <option value="ft">ft</option>
+                        <option value="cm">cm</option>
+                        <option value="m" selected>m</option>
+                      </select>
+                    </div>
+                  </div>
+                  <div>
+                    <label class="block text-sm font-medium text-gray-700 mb-2"
+                      >Durability (PSI)</label
+                    >
+                    <select
+                      id="column-psi"
+                      class="w-full px-3 py-2 border border-gray-300 rounded-md text-sm bg-white"
+                    >
+                      <option value="2000">2000 PSI</option>
+                      <option value="3000">3000 PSI</option>
+                      <option value="3500" selected>3500 PSI</option>
+                      <option value="4000">4000 PSI</option>
+                      <option value="5000">5000 PSI</option>
+                    </select>
+                  </div>
+                </div>
+              </div>
+
+              <div id="footing" class="tab-content">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-6">
+                  <div>
+                    <label class="block text-sm font-medium text-gray-700 mb-2"
+                      >Length</label
+                    >
+                    <div class="flex">
+                      <input
+                        type="number"
+                        id="footing-length"
+                        class="flex-1 px-3 py-2 border border-gray-300 rounded-l-md text-sm"
+                        placeholder="Enter length"
+                      />
+                      <select
+                        id="footing-length-unit"
+                        class="border-l-0 border border-gray-300 rounded-r-md px-3 py-2 text-sm bg-white"
+                      >
+                        <option value="ft">ft</option>
+                        <option value="in">in</option>
+                        <option value="m" selected>m</option>
+                        <option value="cm">cm</option>
+                      </select>
+                    </div>
+                  </div>
+                  <div>
+                    <label class="block text-sm font-medium text-gray-700 mb-2"
+                      >Width</label
+                    >
+                    <div class="flex">
+                      <input
+                        type="number"
+                        id="footing-width"
+                        class="flex-1 px-3 py-2 border border-gray-300 rounded-l-md text-sm"
+                        placeholder="Enter width"
+                      />
+                      <select
+                        id="footing-width-unit"
+                        class="border-l-0 border border-gray-300 rounded-r-md px-3 py-2 text-sm bg-white"
+                      >
+                        <option value="ft">ft</option>
+                        <option value="in">in</option>
+                        <option value="m" selected>m</option>
+                        <option value="cm">cm</option>
+                      </select>
+                    </div>
+                  </div>
+                  <div>
+                    <label class="block text-sm font-medium text-gray-700 mb-2"
+                      >Thickness</label
+                    >
+                    <div class="flex">
+                      <input
+                        type="number"
+                        id="footing-thickness"
+                        class="flex-1 px-3 py-2 border border-gray-300 rounded-l-md text-sm"
+                        placeholder="Enter thickness"
+                      />
+                      <select
+                        id="footing-thickness-unit"
+                        class="border-l-0 border border-gray-300 rounded-r-md px-3 py-2 text-sm bg-white"
+                      >
+                        <option value="in">in</option>
+                        <option value="ft">ft</option>
+                        <option value="cm">cm</option>
+                        <option value="m" selected>m</option>
+                      </select>
+                    </div>
+                  </div>
+                  <div>
+                    <label class="block text-sm font-medium text-gray-700 mb-2"
+                      >Durability (PSI)</label
+                    >
+                    <select
+                      id="footing-psi"
+                      class="w-full px-3 py-2 border border-gray-300 rounded-md text-sm bg-white"
+                    >
+                      <option value="2500">2500 PSI</option>
+                      <option value="3000">3000 PSI</option>
+                      <option value="3500" selected>3500 PSI</option>
+                      <option value="4000">4000 PSI</option>
+                      <option value="5000">5000 PSI</option>
+                    </select>
+                  </div>
+                </div>
+              </div>
+
+              <button
+                id="calculate-btn"
+                class="w-full bg-primary text-white px-6 py-3 rounded-lg font-medium hover:bg-blue-700 transition-colors !rounded-button whitespace-nowrap"
+              >
+                Calculate
+              </button>
+            </div>
+
+            <div
+              id="results-section"
+              class="bg-white rounded-lg shadow-sm border border-gray-200 p-6 mt-6 hidden"
+            >
+              <h3 class="text-lg font-semibold text-gray-900 mb-4">
+                Calculation Results
+              </h3>
+              <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div>
+                  <h4 class="font-medium text-gray-900 mb-3">
+                    Material Quantities
+                  </h4>
+                  <div class="space-y-2 text-sm">
+                    <div class="flex justify-between">
+                      <span class="text-gray-600">Cement:</span>
+                      <span id="cement-qty" class="font-medium">0 bags</span>
+                    </div>
+                    <div class="flex justify-between">
+                      <span class="text-gray-600">Sand:</span>
+                      <span id="sand-qty" class="font-medium">0 cu ft</span>
+                    </div>
+                    <div class="flex justify-between">
+                      <span class="text-gray-600">Gravel:</span>
+                      <span id="gravel-qty" class="font-medium">0 cu ft</span>
+                    </div>
+                    <div class="flex justify-between">
+                      <span class="text-gray-600">Water:</span>
+                      <span id="water-qty" class="font-medium">0 L</span>
+                    </div>
+                  </div>
+                </div>
+                <div>
+                  <h4 class="font-medium text-gray-900 mb-3">Cost Breakdown</h4>
+                  <div class="space-y-2 text-sm">
+                    <div class="flex justify-between">
+                      <span class="text-gray-600">Cement Cost:</span>
+                      <span id="cement-cost" class="font-medium">₱0.00</span>
+                    </div>
+                    <div class="flex justify-between">
+                      <span class="text-gray-600">Sand Cost:</span>
+                      <span id="sand-cost" class="font-medium">₱0.00</span>
+                    </div>
+                    <div class="flex justify-between">
+                      <span class="text-gray-600">Gravel Cost:</span>
+                      <span id="gravel-cost" class="font-medium">₱0.00</span>
+                    </div>
+                    <div class="flex justify-between">
+                      <span class="text-gray-600">Water Cost:</span>
+                      <span id="water-cost" class="font-medium">₱0.00</span>
+                    </div>
+                    <div class="border-t border-gray-200 pt-2 mt-2">
+                      <div class="flex justify-between font-medium">
+                        <span>Total Cost:</span>
+                        <span id="total-cost" class="text-primary">₱0.00</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="mt-6 pt-4 border-t border-gray-200">
+                <div class="flex items-center space-x-4">
+                  <input
+                    type="text"
+                    id="project-name"
+                    placeholder="Enter project name"
+                    class="flex-1 px-3 py-2 border border-gray-300 rounded-md text-sm"
+                  />
+                  <button
+                    id="save-calculation"
+                    class="bg-secondary text-white px-4 py-2 rounded-md text-sm font-medium hover:bg-blue-600 transition-colors !rounded-button whitespace-nowrap"
+                  >
+                    Save Calculation
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="space-y-6">
+            <div
+              class="bg-white rounded-lg shadow-sm border border-gray-200 p-6"
+            >
+              <h3 class="text-lg font-semibold text-gray-900 mb-4">
+                Material Prices
+              </h3>
+              <div class="space-y-4">
+                <div>
+                  <label class="block text-sm font-medium text-gray-700 mb-2"
+                    >Currency</label
+                  >
+                  <select
+                    id="currency"
+                    class="w-full px-3 py-2 border border-gray-300 rounded-md text-sm bg-white"
+                  >
+                    <option value="PHP">Philippine Peso (₱)</option>
+                    <option value="USD">US Dollar ($)</option>
+                    <option value="EUR">Euro (€)</option>
+                  </select>
+                </div>
+                <div>
+                  <label class="block text-sm font-medium text-gray-700 mb-2"
+                    >Cement (per bag)</label
+                  >
+                  <input
+                    type="number"
+                    id="cement-price"
+                    value="250"
+                    class="w-full px-3 py-2 border border-gray-300 rounded-md text-sm"
+                    placeholder="0.00"
+                  />
+                </div>
+                <div>
+                  <label class="block text-sm font-medium text-gray-700 mb-2"
+                    >Sand (per bag)</label
+                  >
+                  <input
+                    type="number"
+                    id="sand-price"
+                    value="45"
+                    class="w-full px-3 py-2 border border-gray-300 rounded-md text-sm"
+                    placeholder="0.00"
+                  />
+                </div>
+                <div>
+                  <label class="block text-sm font-medium text-gray-700 mb-2"
+                    >Gravel (per bag)</label
+                  >
+                  <input
+                    type="number"
+                    id="gravel-price"
+                    value="55"
+                    class="w-full px-3 py-2 border border-gray-300 rounded-md text-sm"
+                    placeholder="0.00"
+                  />
+                </div>
+                <div>
+                  <label class="block text-sm font-medium text-gray-700 mb-2">Water (per liter)</label>
+                  <input
+                    type="number"
+                    id="water-price"
+                    value="0.50"
+                    step="0.01"
+                    class="w-full px-3 py-2 border border-gray-300 rounded-md text-sm"
+                    placeholder="0.00"
+                  />
+                </div>
+              </div>
+            </div>
+
+            <div
+              class="bg-white rounded-lg shadow-sm border border-gray-200 p-6"
+            >
+              <h3 class="text-lg font-semibold text-gray-900 mb-4">
+                Environmental Factors
+              </h3>
+              <div class="space-y-6">
+                <div>
+                  <div class="flex items-center justify-between mb-2">
+                    <label class="text-sm font-medium text-gray-700"
+                      >Level of Humidity</label
+                    >
+                    <span id="humidity-value" class="text-sm text-gray-600"
+                      >50%</span
+                    >
+                  </div>
+                  <input
+                    type="range"
+                    id="humidity"
+                    min="20"
+                    max="90"
+                    value="50"
+                    class="w-full"
+                  />
+                </div>
+                <div>
+                  <div class="flex items-center justify-between mb-2">
+                    <label class="text-sm font-medium text-gray-700"
+                      >Temperature (°C)</label
+                    >
+                    <span id="temperature-value" class="text-sm text-gray-600"
+                      >25°C</span
+                    >
+                  </div>
+                  <input
+                    type="range"
+                    id="temperature"
+                    min="10"
+                    max="40"
+                    value="25"
+                    class="w-full"
+                  />
+                </div>
+              </div>
+            </div>
+
+            <div
+              class="bg-white rounded-lg shadow-sm border border-gray-200 p-6"
+            >
+              <div class="flex items-center justify-between mb-4">
+                <h3 class="text-lg font-semibold text-gray-900">
+                  Saved Calculations
+                </h3>
+                <button
+                  id="clear-history"
+                  class="text-red-600 hover:text-red-700 text-sm"
+                >
+                  Remove All
+                </button>
+              </div>
+              <div id="saved-calculations" class="space-y-3">
+                <p class="text-gray-500 text-sm">No saved calculations yet.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </main>
+
+    <footer class="bg-white border-t border-gray-200 mt-16">
+      <div class="max-w-7xl mx-auto px-6 py-8">
+        <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+          <div>
+            <h4 class="font-semibold text-gray-900 mb-4">Researchers</h4>
+            <ul class="space-y-2 text-sm text-gray-600">
+              <li><a href="#" class="#">Khialyn R. De Luna</a></li>
+              <li>
+                <a href="#" class="#">Ace M. Gaabon</a>
+              </li>
+              <li>
+                <a href="#" class="#">Angela N. Dalay</a>
+              </li>
+              <li>
+                <a href="#" class="#">Zairen C. Nanales</a>
+              </li>
+              <li>
+                <a href="#" class="#">Ghian Kyle P. Trinidad</a>
+              </li>
+              </li>
+            </ul>
+          </div>
+          <div>
+            <h4 class="font-semibold text-gray-900 mb-4">Location</h4>
+            <ul class="space-y-2 text-sm text-gray-600">
+              <li><a href="#" class="#">Sta. Maria Integrated Highschool</a></li>
+              <li><a href="#" class="3">Poblacion IV Santa Maria Laguna</a></li>
+              <li><a href="#" class="#">Feedback</a></li>
+            </ul>
+          </div>
+          <div>
+            <h4 class="font-semibold text-gray-900 mb-4">Contacts</h4>
+            <ul class="space-y-2 text-sm text-gray-600">
+              <li><a href="#" class="#">09918442811</a></li>
+              <li>
+                <a href="#" class="#">Research </a>
+              </li>
+              <li><a href="#" class="#">Cost Estimator</a></li>
+            </ul>
+          </div>
+          <div>
+            <h4 class="font-semibold text-gray-900 mb-4">About</h4>
+            <p class="text-sm text-gray-600">
+              Professional concrete calculator for accurate material estimation
+              and cost analysis in construction projects.
+            </p>
+          </div>
+        </div>
+        <div
+          class="border-t border-gray-200 mt-8 pt-8 text-center text-sm text-gray-600"
+        >
+          <p>&copy; Calcrete. All rights reserved.</p>
+        </div>
+      </div>
+    </footer>
+
+    <script src="script.js" defer></script>
+  </body>
+</html>

@@ -1,0 +1,61 @@
+/* Custom small styles extracted from original page */
+:where([class^="ri-"])::before {
+  content: "\f3c2";
+}
+.tab-content { display: none; }
+.tab-content.active { display: block; }
+.tab-button.active { background-color: #2563eb; color: white; }
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button { -webkit-appearance: none; margin: 0; }
+input[type="number"] { appearance: textfield; -moz-appearance: textfield; }
+.accordion-content { max-height: 0; overflow: hidden; transition: max-height 0.3s ease; }
+.accordion-content.active { max-height: 500px; }
+/* Small helper for hidden results */
+#results-section.hidden { display: none; }
+/* Saved calculations list */
+#saved-calculations .calc-item { border: 1px solid #e5e7eb; padding: 0.5rem; border-radius: 6px; }
+/* Basic toast */
+.toast { position: fixed; right: 1rem; bottom: 1rem; background: rgba(37,99,235,0.95); color: white; padding: 0.5rem 1rem; border-radius: 6px; box-shadow: 0 6px 18px rgba(0,0,0,0.08); }
+/* Navigation active link */
+.nav-active {
+  background-color: #2563eb;
+  color: white !important;
+  padding: 0.35rem 0.9rem;
+  border-radius: 9999px;
+}
+
+.steps-container {
+    display: flex;
+    gap: 20px;        /* space between Step 1 and Step 2 */
+    align-items: flex-start;  /* Align tops horizontally */
+}
+
+.step {
+    flex: 1;          /* Makes both steps share the width */
+}
+
+.step1 {
+    /* Optional styling */
+}
+
+.step2 {
+    /* Optional styling */
+}
+
+.steps-container {
+    display: flex;
+    gap: 20px;        /* space between Step 1 and Step 2 */
+    align-items: flex-start;  /* Align tops horizontally */
+}
+
+.step {
+    flex: 1;          /* Makes both steps share the width */
+}
+
+.step3 {
+    /* Optional styling */
+}
+
+.step4 {
+    /* Optional styling */
+}

@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ConMat Calc </title>
+    <script src="https://cdn.tailwindcss.com/3.4.16"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: { primary: "#2563eb", secondary: "#3b82f6" },
+            borderRadius: {
+              none: "0px",
+              sm: "4px",
+              DEFAULT: "8px",
+              md: "12px",
+              lg: "16px",
+              xl: "20px",
+              "2xl": "24px",
+              "3xl": "32px",
+              full: "9999px",
+              button: "8px",
+            },
+          },
+        },
+      };
+    </script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.min.css"
+    />
+  <link rel="stylesheet" href="styles.css">
+  </head>
+  <body class="bg-gray-50 min-h-screen">
+    <header class="bg-white shadow-sm border-b border-gray-200">
+      <div class="px-6 py-4">
+        <div class="flex items-center justify-between">
+          <div class="flex items-center space-x-8">
+            <h1 class="text-2xl font-['Pacifico'] text-primary">
+              ConMat Calc
+            </h1>
+            <nav class="hidden md:flex space-x-6"
+              >
+              <a
+                href="index.html"
+                class="text-gray-700 hover:text-primary transition-colors" 
+                >Home</a
+              >
+              <a
+                href="calculator.html"
+                class="text-gray-700 hover:text-primary transition-colors" 
+                >Calculator</a
+              >
+              <a
+                href="introduction.html.html"
+                class="text-gray-700 hover:text-primary transition-colors"
+                >Instructions</a
+              >
+              <a
+                href="materialguides.html"
+                class="text-gray-700 hover:text-primary transition-colors"
+                >Materials Guide</a
+              >
+              <a
+                href="savedcalculation.html"
+                class="text-gray-700 hover:text-primary transition-colors"
+                >Saved Calculations</a
+              >
+            </nav>
+          </div>
+          <button></button>
+           
+          </button>
+        </div>
+      </div>
+    </header>
+    <main class="px-6 py-8">
+      <div class="max-w-7xl mx-auto">
+        <div class="grid grid-cols-1 lg:grid-cols-1 gap-8">
+          <div class="lg:col-span-2">
+            <div
+              class="bg-white rounded-lg shadow-sm border border-gray-200 p-6">
+              <main class="px-6 py-12">
+                <section class="max-w-5xl mx-auto">
+                  <div class="bg-white rounded-lg shadow p-8 text-gray-800">
+                    <div class="md:flex md:items-center md:justify-between">
+                      <div class="md:flex-1 md:pr-8">
+                        <h1 class="text-4xl md:text-5xl font-extrabold leading-tight mb-4">ConMatCalc — Smarter Concrete Estimates</h1>
+                        <p class="text-lg text-gray-700 mb-6">Fast, reliable material and water estimates for slabs, beams, columns and footings. Reduce waste, control cost, and plan deliveries with confidence.</p>
+                        <div class="flex flex-wrap gap-3">
+                          <a href="calculator.html" class="inline-block bg-blue-600 text-white px-5 py-3 rounded-md shadow hover:bg-blue-700">Open Calculator</a>
+                          <a href="instruction.html" class="inline-block bg-gray-100 text-gray-800 px-5 py-3 rounded-md hover:bg-gray-200">How to Use</a>
+                          <a href="materialguides.html" class="inline-block bg-gray-100 text-gray-800 px-5 py-3 rounded-md hover:bg-gray-200">Material Guides</a>
+                        </div>
+                      </div>
+
+                      <div class="hidden md:block md:w-1/3">
+                        <img src="https://images.unsplash.com/photo-1551836022-d5d88e9218df?q=80&w=800&auto=format&fit=crop&ixlib=rb-4.0.3&s=2d3f1b8d3c4d6a1b1c2d3e4f5a6b7c8d" alt="Concrete work" class="rounded-lg shadow-md">
+                      </div>
+                    </div>
+
+                    <div class="mt-10 grid grid-cols-1 md:grid-cols-3 gap-6">
+                      <div class="p-5 border rounded-md">
+                        <h3 class="font-semibold mb-2">Save Time</h3>
+                        <p class="text-sm text-gray-600">Get material quantities and costs in seconds — no manual mix calculations required.</p>
+                      </div>
+
+                      <div class="p-5 border rounded-md">
+                        <h3 class="font-semibold mb-2">Reduce Waste</h3>
+                        <p class="text-sm text-gray-600">Use unit-aware estimates and environmental adjustments to avoid over-ordering water and materials.</p>
+                      </div>
+
+                      <div class="p-5 border rounded-md">
+                        <h3 class="font-semibold mb-2">Trusted Guidance</h3>
+                        <p class="text-sm text-gray-600">Built-in best-practice tips for mixing, placing and curing concrete help improve quality on-site.</p>
+                      </div>
+                    </div>
+
+                    <div class="mt-8 text-sm text-gray-600">
+                      <p><strong>For engineers, contractors and DIY builders:</strong> ConMatCalc provides quick, defensible estimates to support tendering, ordering and on-site batching. Results respect the units you enter and include water adjustments for temperature and humidity.</p>
+                    </div>
+                  </div>
+
+                  <div class="mt-8 flex gap-6">
+                    <a href="calculator.html" class="text-sm text-blue-600 underline">Start a new calculation</a>
+                    <a href="savedcalculation.html" class="text-sm text-gray-600 underline">View saved calculations</a>
+                  </div>
+                </section>
+              </main>
+
+
+    <footer class="bg-white border-t border-gray-200 mt-16">
+      <div class="max-w-7xl mx-auto px-6 py-8">
+        <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+          <div>
+            <h4 class="font-semibold text-gray-900 mb-4">Researchers</h4>
+            <ul class="space-y-2 text-sm text-gray-600">
+              <li><a href="#" class="#">Khialyn R. De Luna</a></li>
+              <li>
+                <a href="#" class="#">Ace M. Gaabon</a>
+              </li>
+              <li>
+                <a href="#" class="#">Angela N. Dalay</a>
+              </li>
+              <li>
+                <a href="#" class="#">Zairen C. Nanales</a>
+              </li>
+              <li>
+                <a href="#" class="#">Ghian Kyle P. Trinidad</a>
+              </li>
+              </li>
+            </ul>
+          </div>
+          <div>
+            <h4 class="font-semibold text-gray-900 mb-4">Location</h4>
+            <ul class="space-y-2 text-sm text-gray-600">
+              <li><a href="#" class="#">Sta. Maria Integrated Highschool</a></li>
+              <li><a href="#" class="3">Poblacion IV Santa Maria Laguna</a></li>
+              <li><a href="#" class="#">Feedback</a></li>
+            </ul>
+          </div>
+          <div>
+            <h4 class="font-semibold text-gray-900 mb-4">Contacts</h4>
+            <ul class="space-y-2 text-sm text-gray-600">
+              <li><a href="#" class="#">09918442811</a></li>
+              <li>
+                <a href="#" class="#">Research </a>
+              </li>
+              <li><a href="#" class="#">Cost Estimator</a></li>
+            </ul>
+          </div>
+          <div>
+            <h4 class="font-semibold text-gray-900 mb-4">About</h4>
+            <p class="text-sm text-gray-600">
+              Professional concrete calculator for accurate material estimation
+              and cost analysis in construction projects.
+            </p>
+          </div>
+        </div>
+        <div
+          class="border-t border-gray-200 mt-8 pt-8 text-center text-sm text-gray-600"
+        >
+          <p>&copy; Calcrete. All rights reserved.</p>
+        </div>
+      </div>
+    </footer>
+
+    <script src="script.js" defer></script>
+  </body>
+</html>

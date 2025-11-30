@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ConMat Calc </title>
+    <script src="https://cdn.tailwindcss.com/3.4.16"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: { primary: "#2563eb", secondary: "#3b82f6" },
+            borderRadius: {
+              none: "0px",
+              sm: "4px",
+              DEFAULT: "8px",
+              md: "12px",
+              lg: "16px",
+              xl: "20px",
+              "2xl": "24px",
+              "3xl": "32px",
+              full: "9999px",
+              button: "8px",
+            },
+          },
+        },
+      };
+    </script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.min.css"
+    />
+  <link rel="stylesheet" href="styles.css">
+  </head>
+  <body class="bg-gray-50 min-h-screen">
+    <header class="bg-white shadow-sm border-b border-gray-200">
+      <div class="px-6 py-4">
+        <div class="flex items-center justify-between">
+          <div class="flex items-center space-x-8">
+            <h1 class="text-2xl font-['Pacifico'] text-primary">
+              ConMat Calc
+            </h1>
+            <nav class="hidden md:flex space-x-6">
+              <a
+                href="index.html"
+                class="text-gray-700 hover:text-primary transition-colors" 
+                >Home</a
+              >
+              <a
+                href="calculator.html"
+                class="text-gray-700 hover:text-primary transition-colors" 
+                >Calculator</a
+              >
+              <a
+                href="introduction.html.html"
+                class="text-gray-700 hover:text-primary transition-colors"
+                >Instructions</a
+              >
+              <a
+                href="materialguides.html"
+                class="text-gray-700 hover:text-primary transition-colors"
+                >Materials Guide</a
+              >
+              <a
+                href="savedcalculation.html"
+                class="text-gray-700 hover:text-primary transition-colors"
+                >Saved Calculations</a
+              >
+            </nav>
+          </div>
+          <button
+></button>
+          </button>
+        </div>
+      </div>
+    </header>
+
+    
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+            <div class="bg-white rounded-lg shadow-sm border border-gray-200 p-6">
+              <h3 class="text-lg font-semibold text-gray-900 mb-4">Cement</h3>
+              <img src="img20201107061613.jpg" alt="cement bags" class="w-full rounded-md mb-4">
+              <p class="text-sm text-gray-700">Portland cement is the binding agent in concrete. Use fresh, dry cement and keep bags sealed and off the ground to avoid moisture pickup. Old or damp cement loses strength and should be discarded.</p>
+              <h4 class="mt-3 font-medium">Handling & Storage</h4>
+              <img src="angela.jpg" alt="cement storage" class="w-full rounded-md mb-4">
+              <p class="text-sm text-gray-700">Store in a dry, covered area. Avoid stacking bags on damp soil. If cement becomes lumpy or shows signs of hydration, do not use for structural mixes.</p>
+            </div>
+            <div class="bg-white rounded-lg shadow-sm border border-gray-200 p-6">
+              <h3 class="text-lg font-semibold text-gray-900 mb-4">Sand (Concrete Sand)</h3>
+              <img src="storecem.jpg" alt="concrete sand" class="w-full rounded-md mb-4">
+              <p class="text-sm text-gray-700">Use clean, well-graded sand specifically intended for concrete (often called river sand or concrete sand). Avoid beach sand or sand with organic impurities.</p>
+              <h4 class="mt-3 font-medium">Wet vs Dry Sand</h4>
+              <p class="text-sm text-gray-700">Wet sand contains moisture that increases apparent volume; when estimating by volume, account for moisture content (typical wet sand may increase volume by 3–8%). For accurate batching, measure sand by mass or apply a moisture correction factor.</p>
+              <h4 class="mt-2 font-medium">Handling & Tips</h4>
+               <img src="stored.sand1.jpg" alt="concrete sand" class="w-full rounded-md mb-4">
+              <p class="text-sm text-gray-700">Store sand under cover to avoid rain saturation. If using wet sand, reduce mixing water to maintain target water-cement ratio and strength.</p>
+            </div>
+            <div class="bg-white rounded-lg shadow-sm border border-gray-200 p-6">
+              <h3 class="text-lg font-semibold text-gray-900 mb-4">Gravel / Coarse Aggregate</h3>
+              <img src="gravel.photo.jpg" alt="crushed gravel" class="w-full rounded-md mb-4">
+              <p class="text-sm text-gray-700">Coarse aggregate provides bulk and strength. Use well-graded, clean gravel. Select aggregate size compatible with member thickness and reinforcement spacing to avoid segregation.</p>
+              <h4 class="mt-3 font-medium">Wet vs Dry Aggregate</h4>
+              <p class="text-sm text-gray-700">Surface moisture on coarse aggregate may slightly affect mix water but usually has smaller impact than sand moisture. When aggregates are saturated surface dry (SSD), adjust mix water accordingly.</p>
+              <h4 class="mt-2 font-medium">Handling & Tips</h4>
+              <img src="stored.gravel.jpg" alt="crushed gravel" class="w-full rounded-md mb-4">
+              <p class="text-sm text-gray-700">Store aggregates on well-drained platforms, cover to prevent contamination, and avoid mixing different gradations without testing.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+     <footer class="bg-white border-t border-gray-200 mt-16">
+      <div class="max-w-7xl mx-auto px-6 py-8">
+        <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+          <div>
+            <h4 class="font-semibold text-gray-900 mb-4">Researchers</h4>
+            <ul class="space-y-2 text-sm text-gray-600">
+              <li><a href="#" class="#">Khialyn R. De Luna</a></li>
+              <li>
+                <a href="#" class="#">Ace M. Gaabon</a>
+              </li>
+              <li>
+                <a href="#" class="#">Angela N. Dalay</a>
+              </li>
+              <li>
+                <a href="#" class="#">Zairen C. Nanales</a>
+              </li>
+              <li>
+                <a href="#" class="#">Ghian Kyle P. Trinidad</a>
+              </li>
+              </li>
+            </ul>
+          </div>
+          <div>
+            <h4 class="font-semibold text-gray-900 mb-4">Location</h4>
+            <ul class="space-y-2 text-sm text-gray-600">
+              <li><a href="#" class="#">Sta. Maria Integrated Highschool</a></li>
+              <li><a href="#" class="#">Poblacion IV Santa Maria Laguna</a></li>
+              <li><a href="#" class="#">Feedback</a></li>
+            </ul>
+          </div>
+          <div>
+            <h4 class="font-semibold text-gray-900 mb-4">Contacts</h4>
+            <ul class="space-y-2 text-sm text-gray-600">
+              <li><a href="#" class="#">09918442811</a></li>
+              <li>
+                <a href="#" class="#">Research </a>
+              </li>
+              <li><a href="#" class="#">Cost Estimator</a></li>
+            </ul>
+          </div>
+          <div>
+            <h4 class="font-semibold text-gray-900 mb-4">About</h4>
+            <p class="text-sm text-gray-600">
+              Professional concrete calculator for accurate material estimation
+              and cost analysis in construction projects.
+            </p>
+          </div>
+        </div>
+        <div
+          class="border-t border-gray-200 mt-8 pt-8 text-center text-sm text-gray-600"
+        >
+          <p>&copy; Calcrete. All rights reserved.</p>
+        </div>
+      </div>
+    </footer>
+
+    <script src="script.js" defer></script>
+  </body>
+</html>
